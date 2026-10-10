@@ -44,15 +44,32 @@ fun ProfileCard(
             verticalAlignment = Alignment.CenterVertically
         ) {
             CardLogo()
-
             Column(
                 modifier = Modifier
                     .weight(1f)
                     .padding(horizontal = dimensionResource(R.dimen.card_content_spacing))
-            )
-
-
-
+            ) {
+                Text(
+                    text = name,
+                    color = nameColor,
+                    fontFamily = nameFontFamily,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = textSizeResource(R.dimen.text_size_name)
+                )
+                if (phone != null) {
+                    Text(
+                        text = phone,
+                        color = phoneColor,
+                        fontSize = textSizeResource(R.dimen.text_size_detail)
+                    )
+                }
+                Text(
+                    text = address,
+                    color = addressColor,
+                    fontSize = textSizeResource(R.dimen.text_size_detail)
+                )
+            }
+            CardLogo()
         }
     }
 }
