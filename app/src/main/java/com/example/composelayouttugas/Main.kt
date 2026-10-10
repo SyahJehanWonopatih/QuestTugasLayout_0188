@@ -21,7 +21,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import com.example.composelayouttugas.R
 
 @Composable
 fun ProfileCard(
@@ -40,6 +39,20 @@ fun ProfileCard(
         shape = RoundedCornerShape(dimensionResource(R.dimen.card_corner_radius)),
         colors = CardDefaults.cardColors(containerColor = cardColor)
     ) {
+        Row(
+            modifier = Modifier.padding(dimensionResource(R.dimen.card_padding)),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            CardLogo()
+
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(horizontal = dimensionResource(R.dimen.card_content_spacing))
+            )
+
+
+
         }
     }
 }
