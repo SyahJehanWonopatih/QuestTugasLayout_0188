@@ -21,6 +21,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.annotation.DimenRes
+import androidx.compose.ui.platform.LocalDensity
 
 @Composable
 fun ProfileCard(
@@ -83,3 +85,6 @@ private fun CardLogo() {
     )
 }
 
+@Composable
+fun textSizeResource(@DimenRes id: Int): TextUnit =
+    with(LocalDensity.current) { dimensionResource(id).toSp() }
