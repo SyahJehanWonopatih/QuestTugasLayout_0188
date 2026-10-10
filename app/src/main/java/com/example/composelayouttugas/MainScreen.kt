@@ -54,6 +54,26 @@ fun MainScreen(modifier: Modifier = Modifier) {
         )
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.header_spacing)))
 
-
+        Column(
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.card_spacing))
+        ) {
+            ProfileCard(
+                name = stringResource(R.string.name_bambang),
+                address = stringResource(R.string.address_bambang),
+                cardColor = colorResource(R.color.card_gray),
+                nameColor = colorResource(R.color.text_white),
+                addressColor = colorResource(R.color.text_yellow),
+                nameFontFamily = FontFamily.Cursive
+            )
+            ProfileCard(
+                name = stringResource(R.string.name_gibran),
+                phone = stringResource(R.string.phone_gibran),
+                address = stringResource(R.string.address_gibran),
+                cardColor = colorResource(R.color.card_purple),
+                nameColor = colorResource(R.color.text_white),
+                phoneColor = colorResource(R.color.text_cyan),
+                addressColor = colorResource(R.color.text_yellow)
+            )
+            
     }
 }
