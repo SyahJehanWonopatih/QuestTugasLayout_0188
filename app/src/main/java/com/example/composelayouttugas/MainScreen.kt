@@ -93,6 +93,12 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 addressColor = colorResource(R.color.text_white)
             )
         }
+        Spacer(modifier = Modifier.weight(1f))
 
+        Text(
+            text = stringResource(R.string.footer_copyright),
+            color = colorResource(R.color.text_title),
+            fontSize = textSizeResource(R.dimen.text_size_footer)
+        )
     }
 }
