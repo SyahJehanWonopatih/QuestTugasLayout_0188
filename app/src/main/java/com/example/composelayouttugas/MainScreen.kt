@@ -46,6 +46,14 @@ fun MainScreen(modifier: Modifier = Modifier) {
             fontWeight = FontWeight.Bold,
             fontSize = textSizeResource(R.dimen.text_size_title)
         )
+        Text(
+            text = stringResource(R.string.title_kampus),
+            color = colorResource(R.color.text_title),
+            fontWeight = FontWeight.Bold,
+            fontSize = textSizeResource(R.dimen.text_size_subtitle)
+        )
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.header_spacing)))
+
 
     }
 }
