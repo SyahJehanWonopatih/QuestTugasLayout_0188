@@ -74,3 +74,12 @@ fun ProfileCard(
     }
 }
 
+@Composable
+private fun CardLogo() {
+    Image(
+        painter = painterResource(R.drawable.logo_umy),
+        contentDescription = stringResource(R.string.logo_umy),
+        modifier = Modifier.size(dimensionResource(R.dimen.logo_size))
+    )
+}
+
